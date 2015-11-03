@@ -14,7 +14,7 @@
 git tag --contains HEAD | grep -q "v[0-9]*\.[0-9]*\.[0-9]*"
 rc=$?
 
-if [[ $rc != 0 ]]; then
+if [[ $rc == 0 ]]; then
   echo "HEAD is already tagged release. Doing nothing."
 else
     git config user.name "Travis CI"
